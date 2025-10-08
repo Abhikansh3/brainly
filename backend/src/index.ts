@@ -129,7 +129,6 @@ app.get('/api/v1/brain/:sharelink',async(req,res)=>{
 const dbkey = process.env.MOONGO_URL
 async function main(){
     
-//    await mongoose.connect('mongodb+srv://admin:uQw7XwTV7JXonHQn@cluster0.95g7hme.mongodb.net/brainly')
 if(!dbkey){
   throw new Error("MOONGO_URL not defined in .env file");
 } 
