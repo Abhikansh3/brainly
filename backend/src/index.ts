@@ -84,10 +84,15 @@ app.delete('/api/v1/content',userMiddleware,async(req,res)=>{
 })
 app.post('/api/v1/brain/share',userMiddleware,async (req,res)=>{
     const share = req.body.share;
+    
     if(share){
+        const hash = random(10);
         await LinkModel.create({
             userId:req.userId,
-            hash:random(10)
+            hash:hash
+        })
+        res.json({
+            message:"/share/" + hash
         })
     } else{
         await LinkModel.deleteOne({
@@ -95,7 +100,7 @@ app.post('/api/v1/brain/share',userMiddleware,async (req,res)=>{
         })
     }
     res.json({
-        message:"Updated sharble link"
+        message:"Removed link link"
     })
 })
 app.get('/api/v1/brain/:sharelink',async(req,res)=>{
