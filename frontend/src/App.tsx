@@ -6,8 +6,8 @@ import { PlusIcon } from './icons/Plus'
 function App() {
   return( 
     <>
-    <Button variant='primary' startIcon={<PlusIcon/>} size='sm' text='Share'></Button>
-    <Button variant='secoundary' size='sm' text='Add Content'></Button>
+    <Button variant='primary' startIcon={<PlusIcon size='lg'/>} size='sm' text='Share' onClick={()=>{}}></Button>
+    <Button variant='secoundary' size='sm' text='Add Content' onClick={()=>{}}></Button>
     </>
   )
 
